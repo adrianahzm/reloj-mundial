@@ -1,0 +1,194 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 9px 29px rgba(30, 68, 85, 0.418);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.dark-mode-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Diseño de los relojes */
+.clocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.clock {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 9px rgba(18, 162, 229, 0.418);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Reloj analógico */
+.analog-clock {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 3px solid #333;
+    border-radius: 50%;
+}
+
+.analog-clock .hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 4px;
+    height: 40%;
+    background-color: #333;
+    border-radius: 2px;
+    transform-origin: bottom;
+    transform: rotate(90deg);
+}
+
+.analog-clock .hand.second {
+    height: 45%;
+    background-color: red;
+}
+
+select {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 10px;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    appearance: none; /* Eliminar el estilo predeterminado de algunos navegadores */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode h1 {
+    color: #ffffff;
+}
+body.dark-mode {
+    background-color: #121212;
+    color: #010204;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 29px rgba(18, 162, 229, 0.418);
+
+}
+
+body.dark-mode .analog-clock {
+    background-color: #1e1e1e;
+    border-color: #ffffff;
+}
+
+body.dark-mode .analog-clock .hand {
+    background-color: #ffffff;
+}
+
+body.dark-mode .analog-clock .hand.second {
+    background-color: #ff5722;
+}
+body.dark-mode .dark-mode-btn {
+    background: none;
+    color: #23b4e5; 
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Estilos responsive */
+
+/* Para pantallas de tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .clocks {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .clock {
+        padding: 15px;
+    }
+
+    .analog-clock {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Para pantallas de móviles */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .clocks {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 10px;
+    }
+
+    .clock {
+        padding: 10px;
+    }
+
+    .analog-clock {
+        width: 80px;
+        height: 80px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}

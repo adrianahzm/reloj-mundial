@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reloj Mundial</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Reloj Mundial</h1>
+            <button id="dark-mode-toggle" class="dark-mode-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <div class="clocks">
+            <!-- Ciudad de México -->
+            <div class="clock">
+                <h2>Ciudad de México</h2>
+                <div class="analog-clock" id="mexico-clock">
+                    <div class="hand hour"></div>
+                    <div class="hand minute"></div>
+                    <div class="hand second"></div>
+                </div>
+                <select id="mexico-timezone">
+                    <option value="America/Mexico_City">America/Mexico_City</option>
+                    <option value="America/Monterrey">America/Monterrey</option>
+                    <option value="America/Tijuana">America/Tijuana</option>
+                </select>
+                <p id="mexico-time"></p>
+                <p id="mexico-difference"></p>
+            </div>
+
+            <!-- Buenos Aires -->
+            <div class="clock">
+                <h2>Buenos Aires</h2>
+                <div class="analog-clock" id="buenosaires-clock">
+                    <div class="hand hour"></div>
+                    <div class="hand minute"></div>
+                    <div class="hand second"></div>
+                </div>
+                <select id="buenosaires-timezone">
+                    <option value="America/Argentina/Buenos_Aires">America/Argentina/Buenos_Aires</option>
+                    <option value="America/Montevideo">America/Montevideo</option>
+                </select>
+                <p id="buenosaires-time"></p>
+                <p id="buenosaires-difference"></p>
+            </div>
+
+            <!-- Madrid -->
+            <div class="clock">
+                <h2>Madrid</h2>
+                <div class="analog-clock" id="madrid-clock">
+                    <div class="hand hour"></div>
+                    <div class="hand minute"></div>
+                    <div class="hand second"></div>
+                </div>
+                <select id="madrid-timezone">
+                    <option value="Europe/Madrid">Europe/Madrid</option>
+                    <option value="Europe/Barcelona">Europe/Barcelona</option>
+                </select>
+                <p id="madrid-time"></p>
+                <p id="madrid-difference"></p>
+            </div>
+
+            <!-- Tokio -->
+            <div class="clock">
+                <h2>Tokio</h2>
+                <div class="analog-clock" id="tokyo-clock">
+                    <div class="hand hour"></div>
+                    <div class="hand minute"></div>
+                    <div class="hand second"></div>
+                </div>
+                <select id="tokyo-timezone">
+                    <option value="Asia/Tokyo">Asia/Tokyo</option>
+                    <option value="Asia/Seoul">Asia/Seoul</option>
+                </select>
+                <p id="tokyo-time"></p>
+                <p id="tokyo-difference"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
